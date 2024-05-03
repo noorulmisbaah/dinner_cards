@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Table</title>
+    <link rel="stylesheet" href="css/font-families.css">
+    <link rel="stylesheet" href="css/information.css">
+    <link rel="stylesheet" href="css/media-query.css">
+</head>
+<body>
+    <div class="content">
+        <center>
+            <img src="imgs/MAAUN Logo.jpg" alt="Logo">
+        </center>
+        <p class="heading">Maryam Abacha American University of Nigeria</p>
+        <p class="subheading">DEPARTMENT OF <%= department.toUpperCase() %> CARDS COLLECTION RECORD</p>
+        <center>
+            <% if (records.length < 1) { %>
+                <h1>No record to show for <%= department %> department.</h1>
+            <% } else { %>
+                <table border="1">
+                    <thead>
+                        <th>S/N</th>
+                        <th>Student Name</th>
+                        <th>Department</th>
+                        <th>Matriculation Number</th>
+                    </thead>
+                    <tbody>
+                        <% records.forEach((record, index) => { %>
+                            <tr>
+                                <td><%= index + 1 %>.</td>
+                                <td class="center"><%= record.studentName %></td>
+                                <td class="center"><%= record.department %></td>
+                                <td class="center"><%= record.matriculationNumber %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            <% } %>
+        </center>
+        <div class="records">
+            <% if (records.length > 0) {
+                records.forEach((record) => { %>
+                    <div class="record">
+                        <p class="student-name"><%= record.studentName %></p>
+                        <p>Department: <span><b><%= record.department %></b></span></p>
+                        <p>Matriculation Number: <span><b><%= record.matriculationNumber %></b></span></p>
+                    </div>
+                <% })
+            } %> 
+        </div>
+    </div>
+</body>
+</html>

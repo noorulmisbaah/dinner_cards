@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Collection</title>
+    <link rel="stylesheet" href="css/font-families.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    <link rel="stylesheet" href="notification-box/notification_styles.css">
+    <script defer src="notification-box/notification_funcs.js"></script>
+    <script defer src="js/index.js"></script>
+</head>
+<body>
+    <header>
+        <span>Upload</span>
+        <span>View</span>
+    </header>
+    <div class="content">
+        <p class="heading">Students' Dinner Card Collection</p>
+        <div class="forms">
+            <div class="form">
+                <input type="text" placeholder="Student's name..." id="student-name-field">
+                <select id="student-department-field">
+                    <option>Accounting</option>
+                    <option>Economics</option>
+                    <option>Computer Science</option>
+                    <option>International Relations</option>
+                    <option>Business Administration</option>
+                    <option>Peace</option>
+                </select>
+                <input type="number" placeholder="Matriculation number..." id="student-matriculation-number-field">
+                <button id="submit-button">Submit</button>
+            </div>
+            <div class="form">
+                <form action="fetch_information" method="POST">
+                    <select id="student-department-field" name="department">
+                        <option>Accounting</option>
+                        <option>Economics</option>
+                        <option>Computer Science</option>
+                        <option>International Relations</option>
+                        <option>Business Administration</option>
+                        <option>Peace</option>
+                    </select>
+                    <button type="submit">Fetch</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Poppins;
+}
+
+::selection {
+    background: #FF55FF;
+    color: #FFFFFF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 0.5rem;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    width: 10rem;
+}
+
+.content {
+    padding: 3rem 7rem;
+}
+
+.heading {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.subheading {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #555555;
+}
+
+.records {
+    display: none;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.record {
+    padding: 1rem;
+    border: 1px solid #FF55FF;
+    border-radius: 5px;
+}
+.student-name {
+    font-size: 1.15rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}

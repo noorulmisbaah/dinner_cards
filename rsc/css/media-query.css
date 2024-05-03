@@ -1,0 +1,48 @@
+@media screen and (max-width: 960px) {
+    .content {
+        padding: 2rem 5rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .subheading {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        padding: 2rem 1rem;
+    }
+
+    img {
+        width: 7rem;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    table {
+        display: none;
+    }
+
+    button,
+    input,
+    select {
+        width: 100%;
+    }
+
+    .records {
+        display: flex;
+    }
+
+    .heading {
+        font-size: 1.2rem;
+    }
+
+    .subheading {
+        font-size: 1.15rem;
+    }
+}
