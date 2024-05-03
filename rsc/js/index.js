@@ -3,7 +3,7 @@ function submitInformation() {
     const department = studentDepartmentField.value.toUpperCase();
     const matriculationNumber = makeMatricNumber(department, studentMatriculationNumberField.value);
 
-    if (!studentName || !department || !matriculationNumber) {
+    if (!studentName || !department || !studentMatriculationNumberField.value) {
         showNotificationBox('Submission Error', 'The information is not submitted because some fields are empty.');
     } else {
         fetch('submit_information', {
